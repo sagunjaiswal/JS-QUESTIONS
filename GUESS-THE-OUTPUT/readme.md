@@ -97,3 +97,15 @@ This happens due to the event loop of javascript, first it will handle synchrono
 completion it will handle asynchronous
 
 
+- GUESS THE OUTPUT :
+
+const arr = [1,2,3,4]
+arr.push(5)
+
+O/P :
+[1,2,3,4,5]
+
+REASON :
+The const declaration creates a read-only reference to a value. It does not mean the value it holds is immutable, 
+just that the variable identifier cannot be reassigned.
+
