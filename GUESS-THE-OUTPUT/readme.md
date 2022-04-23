@@ -49,3 +49,51 @@ REASON :
 In this case, the setTimeout and setInterval is an asynchronous operations so first, it calls the setInterval
 ,setInterval will print the value of count every 200 milliseconds and then after 2-second setTimeout
 will invoke and setInterval condition get dissatisfied, it will print up to 8 and execution will continue
+
+- GUESS THE OUTPUT
+
+var a =1
+var b =’1'
+console.log(a===b);
+console.log(a==b);
+
+O/P :
+false
+true
+
+REASON :
+In “===” it with compare datatype also, of LHS & RHS and whereas “==” only compare values of LHS and RHS.
+
+- GUESS THE OUTPUT :
+
+var a= {name:”vineet”}
+var b={name:”vineet”}
+console.log(a===b);
+console.log(a==b);
+
+O/P : 
+false
+false
+
+REASON : 
+When comparing two objects, JavaScript compares internal references which are equal only when both operands 
+refer to the same object in memory, keys, and values are not checked, so the content of the object doesn’t 
+matter, the operands both have to reference the same object to return true in comparison.
+
+
+- GUESS THE OUTPUT :
+
+setTimeout(()=>{
+console.log(“Mishra”)
+},2000)
+console.log(“Vineet”)
+
+O/P :
+Vinnet
+Mishra
+
+REASON :
+This happens due to the event loop of javascript, first it will handle synchronous function then after the 
+completion it will handle asynchronous
+
+
